@@ -8,7 +8,13 @@ public class Screen {
 	public Screen(int width, int height) {
 		this.width = width;
 		this.height = height;
-		pixels = new int[width * height];
+		pixels = new int[width * height]; // 0 - 50,399 = 50,400
+	}
+	
+	public void clear() {
+		for (int i = 0; i < pixels.length; i++) {
+			pixels[i] = 0;
+		}
 	}
 
 	public void render() {

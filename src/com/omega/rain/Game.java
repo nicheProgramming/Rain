@@ -8,14 +8,13 @@ import java.awt.image.BufferStrategy;
 import java.awt.image.BufferedImage;
 import java.awt.image.DataBufferInt;
 import javax.swing.JFrame;
-
 import com.omega.rain.graphics.Screen;
 
 public class Game extends Canvas implements Runnable {
 	private static final long serialVersionUID = 1L;
 
 	public static int width = 300;
-	public static int height = width / 16 * 9;
+	public static int height = 168;
 	public static int scale = 3;
 
 	private Thread thread;
@@ -69,6 +68,7 @@ public class Game extends Canvas implements Runnable {
 			return;
 		}
 		
+		screen.clear();
 		screen.render();
 		
 		for (int i = 0; i < pixels.length; i++) {
