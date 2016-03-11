@@ -32,7 +32,7 @@ public class Screen {
 			if (y < 0 || y >= height) break;
 			for (int x = 0; x < width; x++) {
 				if (x < 0 || x >= width) break;
-				int tileIndex = (x / 32) + (y / 32) * 64;
+				int tileIndex = (x >> 4) + (y >> 4) * 64;
 				pixels[x + y * width] = tiles[tileIndex];
 			}
 		}
