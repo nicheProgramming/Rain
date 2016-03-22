@@ -61,6 +61,7 @@ public class Game extends Canvas implements Runnable {
 		double delta = 0;
 		int frames = 0;
 		int updates = 0;
+		requestFocus();
 		while (running) {
 			long now = System.nanoTime();
 			delta += (now - lastTime) / ns;
@@ -88,14 +89,10 @@ public class Game extends Canvas implements Runnable {
 
 	public void update() {
 		key.update();
-		if (key.up)
-			y--;
-		if (key.down)
-			y++;
-		if (key.left)
-			x--;
-		if (key.right)
-			x++;
+		if (key.up) y--;
+		if (key.down) y++;
+		if (key.left) x--;
+		if (key.right) x++;
 	}
 
 	public void render() {
