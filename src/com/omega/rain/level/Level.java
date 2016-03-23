@@ -18,8 +18,7 @@ public class Level {
 		loadlevel(path);
 	}
 
-	protected void generateLevel() {
-		
+	protected void generateLevel() {	
 	}
 
 	private void loadlevel(String path) {

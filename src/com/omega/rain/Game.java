@@ -14,7 +14,7 @@ public class Game extends Canvas implements Runnable {
 	private static final long serialVersionUID = 1L;
 
 	public static int width = 300;
-	public static int height = 168;
+	public static int height = width / 16 * 9;
 	public static int scale = 3;
 	public static String title = "Rain";
 
@@ -85,7 +85,7 @@ public class Game extends Canvas implements Runnable {
 		stop();
 	}
 
-	int x = 0, y = 0;
+	int x, y = 0;
 
 	public void update() {
 		key.update();
