@@ -3,12 +3,9 @@ package com.omega.rain.level;
 import com.omega.rain.graphics.Screen;
 
 public class Level {
-
-	//Got to episode 25
-	//https://youtu.be/ufcmUZqHx4U?list=PLlrATfBNZ98eOOCk2fOFg7Qg5yoQfFAdf
 	
-	private int width, height;
-	private int[] tiles;
+	protected int width, height;
+	protected int[] tiles;
 
 	public Level(int width, int height) {
 		this.width = width;
@@ -21,7 +18,8 @@ public class Level {
 		loadlevel(path);
 	}
 
-	private void generateLevel() {
+	protected void generateLevel() {
+		
 	}
 
 	private void loadlevel(String path) {
