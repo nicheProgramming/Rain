@@ -57,6 +57,7 @@ public class Game extends Canvas implements Runnable {
 	public void run() {
 		long lastTime = System.nanoTime();
 		long timer = System.currentTimeMillis();
+		//Github project shows ns w/o the final
 		final double ns = 1000000000.0 / 60.0;
 		double delta = 0;
 		int frames = 0;
@@ -76,6 +77,7 @@ public class Game extends Canvas implements Runnable {
 
 			if (System.currentTimeMillis() - timer > 1000) {
 				timer += 1000;
+				//Line below is for debugging purposes. Can be removed.
 				System.out.println(updates + " ups, " + frames + " fps");
 				frame.setTitle(title + " | " + updates + " ups, " + frames + " fps");
 				updates = 0;
@@ -85,6 +87,7 @@ public class Game extends Canvas implements Runnable {
 		stop();
 	}
 
+	//May need to be x = 0, y = 0
 	int x, y = 0;
 
 	public void update() {

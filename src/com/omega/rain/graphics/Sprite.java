@@ -12,6 +12,7 @@ public class Sprite {
 	public Sprite(int size, int x, int y, SpriteSheet sheet) {
 		SIZE = size;
 		pixels = new int[SIZE * SIZE];
+		//If errors arise, try changing the size below to SIZE
 		this.x = x * size;
 		this.y = y * size;
 		this.sheet = sheet;

@@ -15,7 +15,7 @@ public class Screen {
 	public Screen(int width, int height) {
 		this.width = width;
 		this.height = height;
-		pixels = new int[width * height]; // 0 - 50,399 = 50,400
+		pixels = new int[width * height];
 
 		for (int i = 0; i < MAP_SIZE * MAP_SIZE; i++) {
 			tiles[i] = random.nextInt(0xffffff);
