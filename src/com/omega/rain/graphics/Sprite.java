@@ -17,7 +17,7 @@ public class Sprite {
 		this.sheet = sheet;
 		load();
 	}
-
+	
 	private void load() {
 		for(int y = 0; y < SIZE; y++) {
 			for(int x = 0; x < SIZE; x++) {
