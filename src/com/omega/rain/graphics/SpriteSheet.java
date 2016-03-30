@@ -2,16 +2,17 @@ package com.omega.rain.graphics;
 
 import java.awt.image.BufferedImage;
 import java.io.IOException;
+
 import javax.imageio.ImageIO;
 
 public class SpriteSheet {
-
+	
 	private String path;
 	public final int SIZE;
 	public int[] pixels;
 	
 	public static SpriteSheet tiles = new SpriteSheet("/textures/spritesheet.png", 256);
-
+	
 	public SpriteSheet(String path, int size) {
 		this.path = path;
 		SIZE = size;
@@ -19,8 +20,6 @@ public class SpriteSheet {
 		load();
 	}
 	
-	//Fatal error definitely in this file, likely the following method.
-
 	private void load() {
 		try {
 			BufferedImage image = ImageIO.read(SpriteSheet.class.getResource(path));
