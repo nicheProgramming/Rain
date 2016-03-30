@@ -19,7 +19,7 @@ public class SpriteSheet {
 		load();
 	}
 	
-	//Fatal error definately in this file, likely the follwing method.
+	//Fatal error definitely in this file, likely the following method.
 
 	private void load() {
 		try {
