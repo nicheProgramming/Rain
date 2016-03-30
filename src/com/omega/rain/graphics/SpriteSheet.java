@@ -18,6 +18,8 @@ public class SpriteSheet {
 		pixels = new int[SIZE * SIZE];
 		load();
 	}
+	
+	//Fatal error definately in this file, likely the follwing method.
 
 	private void load() {
 		try {
