@@ -26,7 +26,7 @@ public class Sprite {
 	}
 	
 	private void setColour(int colour) {
-		for (int 1 = 0; i < SIZE * SIZE; i++) {
+		for (int i = 0; i < SIZE * SIZE; i++) {
 			pixels[i] = colour;
 		}
 	}
