@@ -9,6 +9,8 @@ import java.awt.image.DataBufferInt;
 import javax.swing.JFrame;
 import com.omega.rain.graphics.Screen;
 import com.omega.rain.input.Keyboard;
+import com.omega.rain.level.Level;
+import com.omega.rain.level.RandomLevel;
 
 public class Game extends Canvas implements Runnable {
 	private static final long serialVersionUID = 1L;
@@ -21,6 +23,7 @@ public class Game extends Canvas implements Runnable {
 	private Thread thread;
 	private JFrame frame;
 	private Keyboard key;
+	private Level level;
 	private boolean running = false;
 
 	private Screen screen;
@@ -35,6 +38,7 @@ public class Game extends Canvas implements Runnable {
 		screen = new Screen(width, height);
 		frame = new JFrame();
 		key = new Keyboard();
+		level = new RandomLevel(64, 64);
 
 		addKeyListener(key);
 	}
@@ -87,7 +91,7 @@ public class Game extends Canvas implements Runnable {
 	}
 
 	//May need to be x = 0, y = 0
-	int x, y = 0;
+	int x = 0, y = 0;
 
 	public void update() {
 		key.update();
@@ -105,7 +109,7 @@ public class Game extends Canvas implements Runnable {
 		}
 
 		screen.clear();
-		screen.render(x, y);
+		level.render(x, y, screen);
 
 		for (int i = 0; i < pixels.length; i++) {
 			pixels[i] = screen.pixels[i];
